@@ -1,0 +1,28 @@
+
+📦 Deploy → GitHub
+
+→ Инициализирую git...
+Initialized empty Git repository in D:/ai project/Devin/.git/
+→ Проверяю репо 777777user/A...
+✓ Репо уже существует
+warning: in the working copy of 'books/book.fb2', LF will be replaced by CRLF the next time Git touches it
+[main (root-commit) fab25f2] initial commit
+ 8 files changed, 11225 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .nojekyll
+ create mode 100644 README.md
+ create mode 100644 assets/css/style.css
+ create mode 100644 assets/js/app.js
+ create mode 100644 books/book.fb2
+ create mode 100644 deploy.py
+ create mode 100644 index.html
+✓ Коммит: "initial commit"
+→ Пушу в GitHub...
+remote: Permission to 777777user/A.git denied to 777777user.
+fatal: unable to access 'https://github.com/777777user/A.git/': The requested URL returned error: 403
+⚠ Обычный push не прошёл — делаю force push
+remote: Permission to 777777user/A.git denied to 777777user.
+fatal: unable to access 'https://github.com/777777user/A.git/': The requested URL returned error: 403
+✗ Push не удался даже с --force. Проверь токен и имя репо.
+
+Нажми Enter для выхода...

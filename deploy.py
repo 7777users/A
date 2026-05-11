@@ -229,6 +229,54 @@ def ensure_remote(cfg):
 # --------------------------------------------------------------------
 # Проверка/создание репо на GitHub
 # --------------------------------------------------------------------
+def verify_token(cfg):
+    """Проверяем токен ДО коммита/пуша, чтобы ловить проблемы с доступом заранее."""
+    info("Проверяю токен...")
+    code, resp = gh_api("GET", "/user", cfg["token"])
+
+    if code == 401:
+        err("Токен невалидный или просрочен.")
+        err("  Сгенерируй новый: https://github.com/settings/tokens/new")
+        err("  ОБЯЗАТЕЛЬНО поставь галку scope: repo (не public_repo отдельно).")
+        pause_and_exit(1)
+
+    if code != 200:
+        err(f"GitHub API не отвечает как надо (HTTP {code}): {resp}")
+        pause_and_exit(1)
+
+    # Username из токена должен совпадать с тем, что в конфиге
+    api_login = (resp or {}).get("login") if isinstance(resp, dict) else None
+    if api_login and api_login.lower() != cfg["github_username"].lower():
+        warn(f"В конфиге github_username='{cfg['github_username']}', "
+             f"а токен принадлежит '{api_login}'. Исправь одно из двух.")
+
+    # Проверяем, что у токена есть scope 'repo' (для classic PAT)
+    # Для fine-grained scopes в этом заголовке не будет, но они и так проверятся при push.
+    try:
+        req = urllib.request.Request(
+            "https://api.github.com/user",
+            headers={
+                "Authorization": f"Bearer {cfg['token']}",
+                "Accept": "application/vnd.github+json",
+                "User-Agent": "deploy.py",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=15) as r:
+            scopes_header = r.headers.get("X-OAuth-Scopes", "") or ""
+    except Exception:
+        scopes_header = ""
+
+    scopes = [s.strip() for s in scopes_header.split(",") if s.strip()]
+    if scopes and "repo" not in scopes:
+        # fine-grained токены сюда не пишут ничего — пропускаем ворнинг для них
+        if any(s in scopes for s in ("public_repo", "repo:status", "repo_deployment")):
+            warn("У токена нет полного scope 'repo' — только частичные (public_repo/...).")
+            warn("Для push'а нужен полный 'repo'. Создай новый токен: "
+                 "https://github.com/settings/tokens/new")
+
+    ok(f"Токен валиден (аккаунт: {api_login or '—'})")
+
+
 def ensure_repo_exists(cfg):
     info(f"Проверяю репо {cfg['github_username']}/{cfg['repository']}...")
     code, _ = gh_api("GET", f"/repos/{cfg['github_username']}/{cfg['repository']}", cfg["token"])
@@ -352,6 +400,7 @@ def main():
 
     check_git_installed()
     cfg = load_or_create_config()
+    verify_token(cfg)
     ensure_gitignore()
     ensure_git_repo(cfg)
     ensure_repo_exists(cfg)
