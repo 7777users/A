@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.vscode/
+.idea/
+
+# Deploy
+deploy.config.json
+.env
+__pycache__/
+*.pyc
