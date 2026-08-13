@@ -6,9 +6,10 @@
   <title>Reader</title>
   <style>
     /* ============================================================
-       iOS 26 - Reader (7 Комфортных тем для глаз)
+       iOS 26 - Reader (14 Комфортных тем для глаз)
        ============================================================ */
 
+    /* --- СВЕТЛЫЕ И ТЁПЛЫЕ ТЕМЫ --- */
     /* 1. Кремовая (Теплая бумага) - По умолчанию */
     :root, html[data-theme="cream"] {
       --bg: #F8F5EE; --bg-elev: #EAE4D3; --text: #2B2A27; --text-secondary: #595854; --text-tertiary: #8C8A85; --separator: rgba(43, 42, 39, 0.12); --accent: #D97706;
@@ -29,20 +30,57 @@
       --bg: #E3F2ED; --bg-elev: #CBE6DC; --text: #253930; --text-secondary: #4A6357; --text-tertiary: #758C81; --separator: rgba(37, 57, 48, 0.12); --accent: #10B981;
       --glass-bg: rgba(227, 242, 237, 0.75); --glass-border: rgba(255, 255, 255, 0.5); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
     }
-    /* 5. Кофейная (Вечерняя) */
+    /* 5. Оливковая (Природная) */
+    html[data-theme="olive"] { 
+      --bg: #E8EBE4; --bg-elev: #D6DCD0; --text: #2D3328; --text-secondary: #586350; --text-tertiary: #84937A; --separator: rgba(45, 51, 40, 0.12); --accent: #657954; 
+      --glass-bg: rgba(232, 235, 228, 0.75); --glass-border: rgba(255, 255, 255, 0.4); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.05); 
+    }
+    /* 6. Персиковая (Теплый вечер) */
+    html[data-theme="peach"] { 
+      --bg: #FDF6E3; --bg-elev: #F7EAD0; --text: #4A3B32; --text-secondary: #7A665A; --text-tertiary: #A69285; --separator: rgba(74, 59, 50, 0.12); --accent: #D97706; 
+      --glass-bg: rgba(253, 246, 227, 0.75); --glass-border: rgba(255, 255, 255, 0.5); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.05); 
+    }
+    /* 7. Пергамент (Античная бумага) */
+    html[data-theme="parchment"] { 
+      --bg: #F5EEDB; --bg-elev: #E8DFC5; --text: #382A1D; --text-secondary: #63503D; --text-tertiary: #8C7A65; --separator: rgba(56, 42, 29, 0.12); --accent: #A86024; 
+      --glass-bg: rgba(245, 238, 219, 0.75); --glass-border: rgba(255, 255, 255, 0.4); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.06); 
+    }
+
+    /* --- ТЁМНЫЕ И ВЕЧЕРНИЕ ТЕМЫ --- */
+    /* 8. Кофейная (Мягкая вечерняя) */
     html[data-theme="coffee"] {
       --bg: #3E2F2B; --bg-elev: #2C201D; --text: #E6DEDD; --text-secondary: #BFAEA9; --text-tertiary: #8C7C77; --separator: rgba(230, 222, 221, 0.15); --accent: #FBBF24;
       --glass-bg: rgba(62, 47, 43, 0.75); --glass-border: rgba(255, 255, 255, 0.05); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     }
-    /* 6. Ночная Синяя (Перед сном) */
+    /* 9. Ночная Синяя (Перед сном) */
     html[data-theme="night"] {
       --bg: #0F172A; --bg-elev: #1E293B; --text: #CBD5E1; --text-secondary: #94A3B8; --text-tertiary: #64748B; --separator: rgba(203, 213, 225, 0.15); --accent: #38BDF8;
       --glass-bg: rgba(15, 23, 42, 0.75); --glass-border: rgba(255, 255, 255, 0.05); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     }
-    /* 7. Тёмная (Мягкая графитовая) */
+    /* 10. Тёмная (Графитовая) */
     html[data-theme="dark"] {
       --bg: #1A1A1A; --bg-elev: #262626; --text: #D4D4D4; --text-secondary: #A3A3A3; --text-tertiary: #737373; --separator: rgba(212, 212, 212, 0.15); --accent: #0A84FF;
       --glass-bg: rgba(26, 26, 26, 0.75); --glass-border: rgba(255, 255, 255, 0.05); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    }
+    /* 11. Лавандовая (Тёмно-фиолетовая) */
+    html[data-theme="lavender"] { 
+      --bg: #1E1B33; --bg-elev: #2A2645; --text: #D6D3E8; --text-secondary: #A29DB8; --text-tertiary: #7A7596; --separator: rgba(214, 211, 232, 0.12); --accent: #A78BFA; 
+      --glass-bg: rgba(30, 27, 51, 0.75); --glass-border: rgba(255, 255, 255, 0.05); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); 
+    }
+    /* 12. Сланец (Серо-синяя) */
+    html[data-theme="slate"] { 
+      --bg: #1E2329; --bg-elev: #2C333A; --text: #D0D5DB; --text-secondary: #9AA3AF; --text-tertiary: #697482; --separator: rgba(208, 213, 219, 0.12); --accent: #38BDF8; 
+      --glass-bg: rgba(30, 35, 41, 0.75); --glass-border: rgba(255, 255, 255, 0.05); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); 
+    }
+    /* 13. Лесная (Тёмно-зелёная) */
+    html[data-theme="forest"] { 
+      --bg: #131E18; --bg-elev: #1C2B22; --text: #C4D4CB; --text-secondary: #8DA899; --text-tertiary: #5D7A69; --separator: rgba(196, 212, 203, 0.12); --accent: #4ADE80; 
+      --glass-bg: rgba(19, 30, 24, 0.75); --glass-border: rgba(255, 255, 255, 0.05); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); 
+    }
+    /* 14. Океан (Глубокая синяя) */
+    html[data-theme="ocean"] { 
+      --bg: #0B192C; --bg-elev: #142842; --text: #C7D7EC; --text-secondary: #85A3C7; --text-tertiary: #52759E; --separator: rgba(199, 215, 236, 0.12); --accent: #60A5FA; 
+      --glass-bg: rgba(11, 25, 44, 0.75); --glass-border: rgba(255, 255, 255, 0.05); --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5); 
     }
 
     * { box-sizing: border-box; }
@@ -82,7 +120,6 @@
     .reader { flex: 1; display: flex; justify-content: center; padding: 92px 20px 120px; position: relative; }
     .content { width: 100%; max-width: 680px; color: var(--text); font-family: "Georgia", "Merriweather", serif; font-size: 19px; line-height: 1.7; }
     
-    /* Headers & FB2 Elements */
     .fb2-cover { display: flex; justify-content: center; margin: 12px 0 32px; }
     .fb2-cover img { max-width: 260px; width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
     .fb2-book-header { text-align: center; margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--separator); font-family: sans-serif; }
@@ -118,8 +155,10 @@
     .nav-divider { width: 1px; height: 24px; background: var(--separator); margin: 0 2px; }
     .nav-divider[hidden] { display: none; }
     .icon-btn-accent { color: var(--accent); }
-    
-    /* ----------------- Modals & Toolbars ----------------- */
+    #jumpBtn { animation: bookmarkAppear 0.45s cubic-bezier(0.32, 0.72, 0, 1); }
+    @keyframes bookmarkAppear { 0% { transform: scale(0.4); opacity: 0; } 60% { transform: scale(1.08); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
+
+    /* ----------------- Modals & Toolbars (Bookmarks) ----------------- */
     .selection-toolbar { position: fixed; left: 50%; bottom: calc(max(16px, env(safe-area-inset-bottom)) + 72px); transform: translate(-50%, 16px); z-index: 60; opacity: 0; pointer-events: none; transition: 0.3s ease; }
     .selection-toolbar.visible { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
     .selection-toolbar[hidden] { display: none; }
@@ -132,6 +171,9 @@
     .toast-inner { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 9999px; font-family: sans-serif; font-size: 15px; font-weight: 600; }
     
     .bookmark-highlight { background-color: var(--accent); border-radius: 4px; opacity: 0.3; padding: 1px 2px; margin: 0 -2px; }
+    .bookmark-highlight.bookmark-pulse { animation: bookmarkPulse 1.6s ease; }
+    @keyframes bookmarkPulse { 0% { box-shadow: 0 0 0 0px rgba(0,0,0, 0.5); } 20% { box-shadow: 0 0 0 10px rgba(0,0,0, 0.0); } 100% { box-shadow: 0 0 0 0px rgba(0,0,0, 0); } }
+    ::selection { background: var(--separator); color: inherit; }
 
     /* ----------------- Book List Modal ----------------- */
     .modal { position: fixed; inset: 0; z-index: 100; background: var(--bg); display: flex; flex-direction: column; transition: 0.3s ease; }
@@ -145,12 +187,11 @@
     .book-item { display: flex; justify-content: space-between; align-items: center; padding: 16px; border-bottom: 1px solid var(--separator); cursor: pointer; border-radius: 12px; margin-bottom: 8px; transition: 0.2s; }
     .book-item:hover, .book-item:active { background: var(--bg-elev); }
     .book-title { font-weight: 600; font-size: 16px; font-family: sans-serif; display: flex; align-items: center; gap: 10px; }
-    .book-progress { font-size: 14px; color: var(--accent); font-weight: 700; background: var(--bg-elev); padding: 4px 12px; border-radius: 9999px; font-family: sans-serif; border: 1px solid var(--separator); }
   </style>
 </head>
 <body>
 
-  <!-- Меню списка книг -->
+  <!-- Меню списка книг (БЕЗ прогрессии) -->
   <div id="bookMenu" class="modal" hidden>
     <div class="modal-header">
       <h2>📚 Моя библиотека</h2>
@@ -162,7 +203,6 @@
 
   <header class="topbar">
     <div class="topbar-inner glass">
-      <!-- Кнопка списка файлов -->
       <button class="icon-btn" id="openMenuBtn" aria-label="Список книг">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
@@ -175,7 +215,6 @@
         <div class="author" id="bookAuthor"></div>
       </div>
       
-      <!-- Кнопка переключения тем -->
       <button class="icon-btn" id="themeToggle" aria-label="Сменить тему">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
@@ -255,10 +294,16 @@
     const toast = $("toast"), toastText = $("toastText");
 
     // ============================================================
-    // Темы (7 режимов)
+    // Темы (14 режимов)
     // ============================================================
-    const themes = ["cream", "sepia", "gray", "mint", "coffee", "night", "dark"];
-    const themeNames = ["Кремовая", "Сепия", "Серая", "Мятная", "Кофейная", "Ночная", "Тёмная"];
+    const themes = [
+      "cream", "sepia", "gray", "mint", "olive", "peach", "parchment",
+      "coffee", "night", "dark", "lavender", "slate", "forest", "ocean"
+    ];
+    const themeNames = [
+      "Кремовая", "Сепия", "Серая", "Мятная", "Оливковая", "Персиковая", "Пергамент",
+      "Кофейная", "Ночная", "Тёмная", "Лавандовая", "Сланец", "Лесная", "Океан"
+    ];
     const THEME_KEY = "reader.theme";
 
     function applyTheme(theme) { document.documentElement.setAttribute("data-theme", theme); }
@@ -279,7 +324,7 @@
     initTheme();
 
     // ============================================================
-    // Меню со списком книг и поиском
+    // Меню со списком книг и поиском (Без прогрессии)
     // ============================================================
     const openMenuBtn = $("openMenuBtn"), bookMenu = $("bookMenu"), closeBookMenu = $("closeBookMenu");
     const bookList = $("bookList"), bookSearch = $("bookSearch");
@@ -287,7 +332,7 @@
 
     async function fetchBooksFromGitHub() {
       let host = window.location.hostname, user = host.split('.')[0], repo = window.location.pathname.split('/')[1] || "Reader";
-      if (!host.includes("github.io")) return [actualBookName]; // Локальная проверка
+      if (!host.includes("github.io")) return [actualBookName];
       
       try {
         const res = await fetch(`https://api.github.com/repos/${user}/${repo}/contents/Books`);
@@ -316,15 +361,9 @@
       }
       const query = bookSearch.value.toLowerCase();
       books.filter(b => b.toLowerCase().includes(query)).forEach(bookName => {
-        // Подтягиваем сохраненный процент прогресса
-        const progress = localStorage.getItem(`reader.fb2.${bookName}.progress`) || "0";
-        
         const div = document.createElement("div");
         div.className = "book-item";
-        div.innerHTML = `
-          <div class="book-title">📘 ${bookName.replace('.fb2', '')}</div>
-          <div class="book-progress">${progress}%</div>
-        `;
+        div.innerHTML = `<div class="book-title">📘 ${bookName.replace('.fb2', '')}</div>`;
         div.onclick = () => { window.location.href = `?book=${encodeURIComponent(bookName)}`; };
         bookList.appendChild(div);
       });
@@ -410,7 +449,7 @@
     }
 
     // ============================================================
-    // Прогресс, Скролл и Навигация
+    // Скролл и Навигация
     // ============================================================
     function indexChapters() {
       chapters = Array.from(contentEl.querySelectorAll(":scope > .fb2-section"));
@@ -441,45 +480,236 @@
     prevBtn.addEventListener("click", () => goToChapter(currentChapter - 1));
     nextBtn.addEventListener("click", () => goToChapter(currentChapter + 1));
 
-    // Умное сохранение прогресса от 0 до 100% при скролле
     let saveT;
     window.addEventListener("scroll", () => {
       clearTimeout(saveT);
-      saveT = setTimeout(() => {
-        const y = window.scrollY;
-        localStorage.setItem(BOOK.storageKey + ".scroll", String(y));
-        
-        // Вычисляем процент прочитанного
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-        let pct = maxScroll > 0 ? Math.round((y / maxScroll) * 100) : 100;
-        pct = Math.max(0, Math.min(100, pct));
-        
-        // Сохраняем процент именно для этой книги, чтобы он был виден в меню
-        localStorage.setItem(`reader.fb2.${actualBookName}.progress`, pct);
-      }, 300);
+      saveT = setTimeout(() => { localStorage.setItem(BOOK.storageKey + ".scroll", String(window.scrollY)); }, 300);
     }, { passive: true });
 
+    function restoreScroll() {
+      const y = parseInt(localStorage.getItem(BOOK.storageKey + ".scroll") || "0", 10);
+      if (y > 0) requestAnimationFrame(() => window.scrollTo(0, y));
+    }
+
     // ============================================================
-    // Закладки ("Остановиться здесь")
+    // Полностью Восстановленная Логика Закладок (Range)[cite: 14]
     // ============================================================
+    const BOOKMARK_KEY = BOOK.storageKey + ".bookmark";
+    let jumpUsedThisSession = false;
+
+    function assignBookmarkIds() {
+      const blocks = contentEl.querySelectorAll("p, h1, h2, h3, h4, .fb2-title, .fb2-subtitle");
+      blocks.forEach((el, i) => el.setAttribute("data-bm", String(i)));
+    }
+
+    function findBookmarkable(node) {
+      let el = node && node.nodeType === Node.TEXT_NODE ? node.parentNode : node;
+      while (el && el !== contentEl && el !== document.body) {
+        if (el.nodeType === Node.ELEMENT_NODE && el.hasAttribute && el.hasAttribute("data-bm")) return el;
+        el = el.parentNode;
+      }
+      return null;
+    }
+
+    function getTextOffsetInBlock(block, node, nodeOffset) {
+      if (!block || !node) return -1;
+      if (node.nodeType === Node.TEXT_NODE) {
+        let acc = 0;
+        const walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
+        let n;
+        while ((n = walker.nextNode())) {
+          if (n === node) return acc + nodeOffset;
+          acc += n.textContent.length;
+        }
+        return -1;
+      }
+      const r = document.createRange();
+      r.selectNodeContents(block);
+      r.setEnd(node, nodeOffset);
+      return r.toString().length;
+    }
+
+    function locateInBlock(block, offset) {
+      const walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT);
+      let acc = 0, n, lastNode = null;
+      while ((n = walker.nextNode())) {
+        lastNode = n;
+        const len = n.textContent.length;
+        if (acc + len >= offset) return { node: n, offset: Math.max(0, offset - acc) };
+        acc += len;
+      }
+      if (lastNode) return { node: lastNode, offset: lastNode.textContent.length };
+      return null;
+    }
+
+    function wrapRange(range) {
+      const spans = [];
+      const startContainer = range.startContainer, endContainer = range.endContainer;
+      const startOffset = range.startOffset, endOffset = range.endOffset;
+      const textNodes = [];
+      
+      const walker = document.createTreeWalker(
+        range.commonAncestorContainer.nodeType === Node.TEXT_NODE ? range.commonAncestorContainer.parentNode : range.commonAncestorContainer,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: (n) => {
+            if (!n.textContent.length) return NodeFilter.FILTER_REJECT;
+            return range.intersectsNode(n) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+          },
+        }
+      );
+      
+      let n;
+      while ((n = walker.nextNode())) textNodes.push(n);
+      if (textNodes.length === 0 && startContainer.nodeType === Node.TEXT_NODE) textNodes.push(startContainer);
+
+      for (const node of textNodes) {
+        const isStart = node === startContainer, isEnd = node === endContainer;
+        let target = node;
+        if (isStart && isEnd) {
+          if (endOffset < node.textContent.length) node.splitText(endOffset);
+          target = startOffset > 0 ? node.splitText(startOffset) : node;
+        } else if (isEnd) {
+          if (endOffset < node.textContent.length) node.splitText(endOffset);
+          target = node;
+        } else if (isStart) {
+          target = startOffset > 0 ? node.splitText(startOffset) : node;
+        }
+        if (!target || !target.textContent) continue;
+        if (target.parentNode && target.parentNode.classList && target.parentNode.classList.contains("bookmark-highlight")) continue;
+
+        const span = document.createElement("span");
+        span.className = "bookmark-highlight";
+        target.parentNode.insertBefore(span, target);
+        span.appendChild(target);
+        spans.push(span);
+      }
+      return spans;
+    }
+
+    function unwrapHighlights() {
+      const spans = Array.from(contentEl.querySelectorAll(".bookmark-highlight"));
+      const parents = new Set();
+      for (const span of spans) {
+        const p = span.parentNode;
+        if (!p) continue;
+        parents.add(p);
+        while (span.firstChild) p.insertBefore(span.firstChild, span);
+        p.removeChild(span);
+      }
+      for (const p of parents) p.normalize();
+    }
+
+    function saveBookmarkFromSelection(sel) {
+      const range = sel.getRangeAt(0);
+      const startBlock = findBookmarkable(range.startContainer), endBlock = findBookmarkable(range.endContainer);
+      if (!startBlock || !endBlock) return null;
+
+      const startBm = startBlock.getAttribute("data-bm"), endBm = endBlock.getAttribute("data-bm");
+      const startOffset = getTextOffsetInBlock(startBlock, range.startContainer, range.startOffset);
+      const endOffset = getTextOffsetInBlock(endBlock, range.endContainer, range.endOffset);
+      if (startOffset < 0 || endOffset < 0) return null;
+
+      const bm = { startBm, startOffset, endBm, endOffset };
+      localStorage.setItem(BOOKMARK_KEY, JSON.stringify(bm));
+      return bm;
+    }
+
+    function applyBookmarkFromStorage() {
+      unwrapHighlights();
+      const raw = localStorage.getItem(BOOKMARK_KEY);
+      if (!raw) return null;
+      let bm;
+      try { bm = JSON.parse(raw); } catch { return null; }
+      if (!bm || bm.startBm == null || bm.endBm == null) return null;
+
+      const startBlock = contentEl.querySelector(`[data-bm="${CSS.escape(bm.startBm)}"]`);
+      const endBlock = contentEl.querySelector(`[data-bm="${CSS.escape(bm.endBm)}"]`);
+      if (!startBlock || !endBlock) return null;
+
+      const start = locateInBlock(startBlock, bm.startOffset), end = locateInBlock(endBlock, bm.endOffset);
+      if (!start || !end) return null;
+
+      try {
+        const range = document.createRange();
+        range.setStart(start.node, start.offset); range.setEnd(end.node, end.offset);
+        if (range.collapsed) return null;
+        const spans = wrapRange(range);
+        return spans[0] || null;
+      } catch (e) { return null; }
+    }
+
+    function showSelectionToolbar() {
+      selectionToolbar.hidden = false;
+      requestAnimationFrame(() => selectionToolbar.classList.add("visible"));
+    }
+
+    function hideSelectionToolbar() {
+      selectionToolbar.classList.remove("visible");
+      setTimeout(() => { if (!selectionToolbar.classList.contains("visible")) selectionToolbar.hidden = true; }, 280);
+    }
+
     function handleSelectionChange() {
       const sel = window.getSelection();
-      if (!sel || sel.isCollapsed || !contentEl.contains(sel.anchorNode)) { selectionToolbar.hidden = true; selectionToolbar.classList.remove("visible"); return; }
-      selectionToolbar.hidden = false; setTimeout(() => selectionToolbar.classList.add("visible"), 10);
+      if (!sel || sel.rangeCount === 0 || sel.isCollapsed || !contentEl.contains(sel.getRangeAt(0).startContainer) || sel.toString().trim().length < 1) {
+        hideSelectionToolbar();
+        return;
+      }
+      showSelectionToolbar();
     }
-    document.addEventListener("selectionchange", () => { setTimeout(handleSelectionChange, 120); });
-    bookmarkBtn.addEventListener("pointerdown", (e) => e.preventDefault());
-    
+
+    let selChangeT;
+    document.addEventListener("selectionchange", () => {
+      clearTimeout(selChangeT);
+      selChangeT = setTimeout(handleSelectionChange, 120);
+    });
+
+    bookmarkBtn.addEventListener("pointerdown", (e) => { e.preventDefault(); });
+    bookmarkBtn.addEventListener("mousedown", (e) => { e.preventDefault(); });
+
     bookmarkBtn.addEventListener("click", (e) => {
       e.preventDefault(); e.stopPropagation();
-      window.getSelection().removeAllRanges();
-      selectionToolbar.classList.remove("visible"); setTimeout(() => { selectionToolbar.hidden = true; }, 300);
-      showToast("📍 Прогресс и закладка сохранены!");
-      
-      // Принудительно сохраняем скролл и % при закладке
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      let pct = maxScroll > 0 ? Math.round((window.scrollY / maxScroll) * 100) : 100;
-      localStorage.setItem(`reader.fb2.${actualBookName}.progress`, pct);
+      const sel = window.getSelection();
+      if (!sel || sel.rangeCount === 0 || sel.isCollapsed || !contentEl.contains(sel.anchorNode)) return;
+
+      const bm = saveBookmarkFromSelection(sel);
+      if (!bm) return;
+
+      sel.removeAllRanges();
+      hideSelectionToolbar();
+      const span = applyBookmarkFromStorage();
+      showToast("📍 Закладка сохранена!");
+      jumpUsedThisSession = true;
+      hideJumpButton();
+      if (span) pulseHighlight();
+    });
+
+    function showJumpButton() { navDivider.hidden = false; jumpBtn.hidden = false; }
+    function hideJumpButton() { jumpBtn.hidden = true; navDivider.hidden = true; }
+
+    function setupJumpButton() {
+      if (jumpUsedThisSession) { hideJumpButton(); return; }
+      const span = contentEl.querySelector(".bookmark-highlight");
+      if (!span) { hideJumpButton(); return; }
+      showJumpButton();
+    }
+
+    function pulseHighlight() {
+      const spans = contentEl.querySelectorAll(".bookmark-highlight");
+      spans.forEach((s) => s.classList.remove("bookmark-pulse"));
+      if (spans[0]) void spans[0].offsetWidth;
+      spans.forEach((s) => s.classList.add("bookmark-pulse"));
+      setTimeout(() => { spans.forEach((s) => s.classList.remove("bookmark-pulse")); }, 1700);
+    }
+
+    jumpBtn.addEventListener("click", () => {
+      const first = contentEl.querySelector(".bookmark-highlight");
+      if (!first) return;
+      isScrollingProgrammatically = true;
+      first.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => { pulseHighlight(); isScrollingProgrammatically = false; }, 600);
+      jumpUsedThisSession = true;
+      hideJumpButton();
     });
 
     let toastT;
@@ -501,10 +731,15 @@
         if (book.body) appendChildren(contentEl, book.body, book.binaries, 0);
 
         bookTitle.textContent = book.title; bookAuthor.textContent = book.author;
-        indexChapters(); setupChapterObserver(); loadingEl.hidden = true;
         
-        const savedY = parseInt(localStorage.getItem(BOOK.storageKey + ".scroll") || "0", 10);
-        if (savedY > 0) requestAnimationFrame(() => window.scrollTo(0, savedY));
+        assignBookmarkIds();
+        applyBookmarkFromStorage();
+        indexChapters(); 
+        setupChapterObserver(); 
+        loadingEl.hidden = true;
+        
+        restoreScroll();
+        setupJumpButton();
       } catch (err) {
         console.error(err); loadingEl.hidden = true; errorEl.hidden = false;
         bookTitle.textContent = "Ошибка";
